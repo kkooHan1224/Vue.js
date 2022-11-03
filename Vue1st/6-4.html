@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+</head>
+<body>
+  <div id="app">
+    <div v-for="(value, key) in object">
+      {{ key }}: {{ value}}
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue@2.7.13"></script>
+  <script>
+  new Vue({
+    el: "#app",
+    data: {
+      object: {
+        firstName: 'joongmin',
+        lastName: 'Lee',
+        age: 38
+      }
+    }
+  });
+  </script>
+</body>
+</html>

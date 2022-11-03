@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+</head>
+<body>
+    <div id="app">
+      <div v-html="rawHtml"></div>
+    </div>
+    <script src="https://unpkg.com/vue@2.7.13"></script>
+    <script>
+      var vm = new Vue({
+        el: "#app",
+        data: {
+          rawHtml: "Hello <b>Vue.js</b>"
+        }
+      });
+    </script>
+</body>
+</html>

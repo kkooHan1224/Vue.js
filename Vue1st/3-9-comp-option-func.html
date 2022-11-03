@@ -1,0 +1,23 @@
+<!-- p.56 vuelst/3-9-com-opt-func.html-->>
+<!DOCTYPE html>
+<html>
+</head>
+<body>
+    <div id="app">
+        <comp />
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10"></script>
+    <script>
+      Vue.component('comp', {
+        render(h) {
+          return h("span", "안녕하세요. Vue입니다.");
+        }
+      });
+      new Vue({
+        el: '#app',
+      });
+    </script>
+</body>
+</html>
+
+
