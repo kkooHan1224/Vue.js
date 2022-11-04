@@ -1,17 +1,18 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/count">Count</router-link> |
-    <router-link to="/computed">computed</router-link> |
-    <router-link to="/conditional">Conditional</router-link>
+    <router-link to="/Count">Count</router-link> |
+    <router-link to="/Computed">computed</router-link> |
+    <router-link to="/Conditional">Conditional</router-link> |
+    <router-link to="/PostCode">PostCode</router-link>
   </nav>
   <router-view />
 </template>
 
 
 
-
-<!-- <script>
+<!-- #1#
+<script>
 import Count from './components/Count.vue'
 import HelloWorld from './components/HelloWorld.vue'
 
