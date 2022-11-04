@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+</head>
+<body>
+  <div id="app">
+    <Input type="number" v-bind:value="id" v-on:input="handleInput"/>
+    <span v-if="id == 1">값이 1입니다.</span>
+    <span v-else-if="id == 2">값이 2입니다.</span>
+    <span v-else>값이 1 또는 2가 아닙니다.</span>
+  </div>
+  <script src="https://unpkg.com/vue@2.7.13"></script>
+  <script>
+  var app = new Vue({
+    el: "#app",
+    data: {
+      id: 2
+    },
+    methods: {
+      handleInput(event) {
+        this.id = parseInt(event.target.value);
+      },
+    },
+  });
+  </script>
+</body>
+</html>
