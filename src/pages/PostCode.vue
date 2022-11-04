@@ -1,10 +1,19 @@
 <template>
-  <input type="text" :value="postcode" placeholder="우편번호" />
-  <input type="button" @click="handleClick()" value="우편번호 찾기" /><br />
-  <input type="text" :value="address" placeholder="주소" /><br />
-  <input type="text" ref="detail" placeholder="상세주소" />
-  <input type="text" :value="extraAddr" placeholder="참고항목" />
+  <form>
+    <input type="text" :value="postcode" placeholder="우편번호" />
+    <input type="button" @click="handleClick()" value="우편번호 찾기" />
+    <input type="text" :value="address" placeholder="주소" />
+    <input type="text" ref="detail" placeholder="상세주소" />
+    <input type="text" :value="extraAddr" placeholder="참고항목" />
+  </form>
 </template>
+<style>
+form {
+  display: grid;  /* 자식 컴포넌트를 격자로 */
+  /* grid-template-columns: 3fr 1fr; // 한 줄에 두칸씩 3:1 비율.  비율로 지정하려면 fr을 쓴다. (pixel로 설정해도 된다.) */
+  grid-template-columns: 1fr 1fr 3fr 3fr 2fr;   /* 내맘대로 수정함 */
+}
+</style>
 <script>
 export default {
   data() {
