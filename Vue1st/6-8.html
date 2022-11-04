@@ -1,0 +1,21 @@
+<!-- 요소 각각 따로 표시하기 위해 ul, li로 변경. ul -> unordered list -->
+<!DOCTYPE html>
+<html>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(n, index) in list">{{index}} : {{n}}</li>
+    </ul>
+  </div>
+  <script src="https://unpkg.com/vue@2.7.13"></script>
+  <script>
+  var app = new Vue({
+    el: "#app",
+    data: {
+      list: ["Vue.js", "React.js", "Polymer.js", "Google", "Hanbit"]
+    }
+  });
+  </script>
+</body>
+</html>
