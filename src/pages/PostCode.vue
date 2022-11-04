@@ -17,7 +17,7 @@ export default {
   methods: {
     handleClick() {
       new daum.Postcode({
-        oncomplete: onComplete,
+        oncomplete: onComplete.bind(this),  // 함수의 this로 컴포넌트를 보내줌.
       }).open();
     },
   },
@@ -55,15 +55,15 @@ function onComplete(data) {
       extraAddr = ' (' + extraAddr + ')';
     }
     // 조합된 참고항목을 해당 필드에 넣는다.
-    app.extraAddr = extraAddr;
+    this.extraAddr = extraAddr;
   } else {
-    app.extraAddr = '';
+    this.extraAddr = '';
   }
 
   // 우편번호와 주소 정보를 해당 필드에 넣는다.
-  app.postcode = data.zonecode;
-  app.address = addr;
+  this.postcode = data.zonecode;
+  this.address = addr;
   // 커서를 상세주소 필드로 이동한다.
-  app.$refs.detail.focus();
+  this.$refs.detail.focus();
 }
 </script>
